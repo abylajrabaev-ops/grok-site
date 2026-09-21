@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Очень подробный учебный сайт о Grok, искусственном интеллекте, его возможностях, принципах работы и применении в образовании.">
+<title>GROK — Большой учебный проект</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#070707;color:#eee;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);backdrop-filter:blur(12px);border-bottom:1px solid #242424}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-size:25px;font-weight:900;letter-spacing:5px}
+.links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.links a{font-size:13px;color:#aaa;transition:.2s}.links a:hover{color:#fff}
+.hero{padding:110px 0 90px;border-bottom:1px solid #222}
+.kicker{color:#999;text-transform:uppercase;letter-spacing:4px;font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(60px,12vw,150px);line-height:.82;letter-spacing:-7px}
+.hero h2{max-width:850px;font-size:clamp(24px,4vw,46px);margin:35px 0 20px;line-height:1.12}
+.lead{max-width:850px;color:#aaa;font-size:18px}
+.buttons{display:flex;gap:12px;margin-top:35px;flex-wrap:wrap}
+.btn{border:1px solid #444;padding:13px 20px;border-radius:8px;background:#eee;color:#080808;font-weight:700}
+.btn.alt{background:#111;color:#eee}
+section{padding:85px 0;border-bottom:1px solid #202020}
+.section-head{display:grid;grid-template-columns:160px 1fr;gap:30px;margin-bottom:42px}
+.number{color:#666;font-size:13px;letter-spacing:3px}
+h3{font-size:clamp(30px,5vw,56px);line-height:1.05}
+h4{font-size:21px;margin-bottom:10px}
+p{color:#aaa;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:#0d0d0d;border:1px solid #262626;border-radius:14px;padding:26px}
+.card strong{color:#fff}
+.big{font-size:24px;color:#eee;margin-bottom:10px}
+.timeline{border-left:1px solid #444;margin-left:8px}
+.event{padding:0 0 35px 30px;position:relative}.event:before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;border-radius:50%;background:#eee}
+.year{font-weight:900;font-size:28px;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;background:#0b0b0b;border:1px solid #292929;border-radius:12px;overflow:hidden}
+th,td{padding:17px;border-bottom:1px solid #292929;text-align:left;vertical-align:top}
+th{color:#fff;background:#121212}td{color:#aaa}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.step{border:1px solid #292929;padding:22px;border-radius:12px;background:#0c0c0c}
+.step b{font-size:30px;display:block;margin-bottom:12px}
+.quote{border-left:3px solid #eee;padding:25px 28px;background:#101010;border-radius:0 12px 12px 0;font-size:21px}
+.warning{border:1px solid #353535;padding:22px;border-radius:12px;background:#0e0e0e}
+ul{padding-left:22px;color:#aaa}li{margin:8px 0}
+.faq{border-top:1px solid #292929}.faq article{padding:22px 0;border-bottom:1px solid #292929}
+footer{padding:50px 0;color:#666}
+.badge{display:inline-block;border:1px solid #444;padding:6px 10px;border-radius:999px;font-size:12px;color:#aaa;margin:4px}
+.top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:1px solid #444;background:#111;color:#fff;border-radius:50%;display:grid;place-items:center}
+@media(max-width:850px){.grid,.grid.two{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.section-head{grid-template-columns:1fr}.links{display:none}}
+@media(max-width:560px){.grid,.grid.two,.steps{grid-template-columns:1fr}h1{letter-spacing:-4px}.hero{padding:75px 0}.nav{min-height:60px}}
+</style>
+</head>
+<body id="top">
+<nav><div class="container nav">
+<div class="logo">GROK</div>
+<div class="links">
+<a href="#about">О Grok</a><a href="#history">История</a><a href="#abilities">Возможности</a><a href="#work">Работа</a><a href="#terms">Термины</a><a href="#compare">Сравнение</a><a href="#education">Образование</a><a href="#practice">Практика</a><a href="#faq">FAQ</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="container">
+<div class="kicker">Учебный информационный проект • искусственный интеллект</div>
+<h1>GROK</h1>
+<h2>Подробный разбор генеративного искусственного интеллекта</h2>
+<p class="lead">Большая учебная версия сайта: что такое Grok, как развивались современные ИИ-системы, из чего состоит их работа, где они применяются, какие возможности дают человеку и почему результат всегда требует осмысления и проверки.</p>
+<div class="buttons"><a class="btn" href="#about">Начать изучение</a><a class="btn alt" href="#practice">Практическая часть</a></div>
+</div></header>
+
+<section id="about"><div class="container">
+<div class="section-head"><div class="number">01 / ОСНОВЫ</div><div><h3>Что такое Grok?</h3><p>Главное понятие без лишней сложности.</p></div></div>
+<div class="grid">
+<div class="card"><div class="big">Диалог</div><p>Grok относится к современным генеративным ИИ-системам, которые позволяют человеку взаимодействовать с моделью через обычный язык.</p></div>
+<div class="card"><div class="big">Генерация</div><p>Система может формировать новый текст, объяснения, идеи и другие результаты на основе полученного запроса и доступного контекста.</p></div>
+<div class="card"><div class="big">Анализ</div><p>ИИ может помогать структурировать информацию, сравнивать варианты, находить связи и превращать сложную тему в более понятную форму.</p></div>
+<div class="card"><div class="big">Программирование</div><p>Генеративные модели применяются для объяснения кода, поиска ошибок, создания примеров и помощи при разработке.</p></div>
+<div class="card"><div class="big">Мультимодальность</div><p>Современные ИИ-системы могут работать не только с текстом: конкретные возможности зависят от используемой версии и подключённых инструментов.</p></div>
+<div class="card"><div class="big">Помощник</div><p>ИИ не обязан быть самостоятельным источником истины. Его полезнее рассматривать как инструмент, который помогает человеку быстрее работать с информацией.</p></div>
+</div>
+</div></section>
+
+<section id="history"><div class="container">
+<div class="section-head"><div class="number">02 / ИСТОРИЯ</div><div><h3>Как развивался Grok</h3><p>От появления продукта к более сложным ИИ-системам.</p></div></div>
+<div class="timeline">
+<div class="event"><div class="year">2023</div><p>Grok был представлен компанией xAI как диалоговая система искусственного интеллекта. Появление продукта стало частью быстро развивающегося рынка генеративных моделей.</p></div>
+<div class="event"><div class="year">Развитие</div><p>Дальнейшие поколения моделей расширяли качество работы с текстом, рассуждением, программированием и другими типами задач.</p></div>
+<div class="event"><div class="year">Мультимодальный этап</div><p>Современное направление развития ИИ связано с обработкой нескольких типов информации и объединением различных инструментов в одной системе.</p></div>
+<div class="event"><div class="year">Сегодня</div><p>ИИ используется как универсальный цифровой помощник: в обучении, программировании, анализе информации, подготовке материалов и творческих задачах.</p></div>
+</div>
+</div></section>
+
+<section id="abilities"><div class="container">
+<div class="section-head"><div class="number">03 / ВОЗМОЖНОСТИ</div><div><h3>Что может делать ИИ?</h3><p>Возможности зависят от конкретной модели, приложения и подключённых инструментов.</p></div></div>
+<div class="grid two">
+<div class="card"><h4>Работа с текстом</h4><p>Написание черновиков, сокращение, структурирование, переформулирование, объяснение сложных понятий и подготовка различных вариантов текста.</p></div>
+<div class="card"><h4>Учёба</h4><p>Разбор темы по шагам, составление плана, создание вопросов для самопроверки, объяснение терминов и помощь в подготовке презентации.</p></div>
+<div class="card"><h4>Программирование</h4><p>ИИ может объяснить фрагмент кода, предложить структуру программы, найти потенциальную ошибку или показать учебный пример.</p></div>
+<div class="card"><h4>Анализ данных</h4><p>Таблицы и текстовые данные можно преобразовывать в структуру, сравнивать показатели и искать закономерности, если инструмент поддерживает соответствующую обработку.</p></div>
+<div class="card"><h4>Идеи и творчество</h4><p>Мозговой штурм, варианты названий, сценариев, концепций, структуры сайта и учебного материала.</p></div>
+<div class="card"><h4>Объяснение</h4><p>Одна и та же тема может быть объяснена простыми словами, академическим языком, через пример, аналогию или пошаговую схему.</p></div>
+</div>
+</div></section>
+
+<section id="work"><div class="container">
+<div class="section-head"><div class="number">04 / ПРИНЦИП РАБОТЫ</div><div><h3>Как ИИ отвечает на запрос?</h3><p>Упрощённая учебная схема, без технической перегрузки.</p></div></div>
+<div class="steps">
+<div class="step"><b>01</b><strong>Запрос</strong><p>Пользователь формулирует задачу.</p></div>
+<div class="step"><b>02</b><strong>Контекст</strong><p>Система учитывает доступный контекст разговора и входные данные.</p></div>
+<div class="step"><b>03</b><strong>Обработка</strong><p>Модель вычисляет наиболее подходящее продолжение и структуру ответа.</p></div>
+<div class="step"><b>04</b><strong>Результат</strong><p>Пользователь получает сформированный ответ или другой результат.</p></div>
+<div class="step"><b>05</b><strong>Проверка</strong><p>Человек оценивает точность и применимость результата.</p></div>
+</div>
+<div class="warning" style="margin-top:25px"><strong>Важно:</strong> эта схема упрощает реальный процесс. Внутри современных моделей используются сложные нейросетевые вычисления, а конкретное поведение зависит от архитектуры, обучения, инструментов и настроек.</div>
+</div></section>
+
+<section id="terms"><div class="container">
+<div class="section-head"><div class="number">05 / ТЕРМИНЫ</div><div><h3>Основные понятия ИИ</h3><p>Мини-словарь для понимания темы.</p></div></div>
+<div class="grid">
+<div class="card"><h4>Нейронная сеть</h4><p>Вычислительная система, построенная из связанных между собой элементов и обучаемых параметров.</p></div>
+<div class="card"><h4>Языковая модель</h4><p>Модель, обученная работать с языковыми данными и создавать или преобразовывать текст.</p></div>
+<div class="card"><h4>Генеративный ИИ</h4><p>Класс систем, способных создавать новый контент на основе входных данных и закономерностей, усвоенных при обучении.</p></div>
+<div class="card"><h4>Промпт</h4><p>Запрос или инструкция, которую пользователь даёт ИИ для получения нужного результата.</p></div>
+<div class="card"><h4>Контекст</h4><p>Информация, которая помогает системе понять текущую задачу и ограничения.</p></div>
+<div class="card"><h4>Галлюцинация</h4><p>Ситуация, когда модель формирует уверенно звучащий, но фактически неверный или неподтверждённый ответ.</p></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div class="number">06 / РАЗВИТИЕ</div><div><h3>От простых алгоритмов к генеративным системам</h3><p>ИИ развивался постепенно.</p></div></div>
+<div class="grid">
+<div class="card"><h4>Правила</h4><p>Ранние системы часто строились вокруг заранее заданных правил и логических условий.</p></div>
+<div class="card"><h4>Машинное обучение</h4><p>Алгоритмы стали обучаться на больших наборах данных, находя закономерности вместо работы только по жёстким правилам.</p></div>
+<div class="card"><h4>Глубокое обучение</h4><p>Многослойные нейронные сети позволили существенно расширить возможности обработки изображений, речи и языка.</p></div>
+<div class="card"><h4>Трансформеры</h4><p>Архитектура Transformer стала важной основой современных языковых моделей благодаря эффективной работе с контекстом.</p></div>
+<div class="card"><h4>Генеративные модели</h4><p>Системы научились не только классифицировать данные, но и создавать новые тексты, изображения, код и другие результаты.</p></div>
+<div class="card"><h4>Мультимодальные системы</h4><p>Современное направление объединяет разные типы данных и инструменты в едином интерфейсе.</p></div>
+</div>
+</div></section>
+
+<section id="compare"><div class="container">
+<div class="section-head"><div class="number">07 / СРАВНЕНИЕ</div><div><h3>Grok и другие ИИ-системы</h3><p>Сравнение по общему назначению, без утверждения, что одна система подходит всем лучше другой.</p></div></div>
+<table>
+<thead><tr><th>Система</th><th>Разработчик</th><th>Общие направления</th><th>Особенность сравнения</th></tr></thead>
+<tbody>
+<tr><td><strong>Grok</strong></td><td>xAI</td><td>Диалог, текст, анализ, программирование и другие задачи</td><td>Конкретные функции зависят от версии и доступных инструментов.</td></tr>
+<tr><td><strong>ChatGPT</strong></td><td>OpenAI</td><td>Диалог, обучение, текст, код, анализ и другие задачи</td><td>Набор возможностей меняется в зависимости от модели и режима.</td></tr>
+<tr><td><strong>Gemini</strong></td><td>Google</td><td>Диалог, работа с информацией и мультимодальные задачи</td><td>Функции зависят от продукта и подключённых сервисов.</td></tr>
+<tr><td><strong>Claude</strong></td><td>Anthropic</td><td>Текст, анализ, программирование и работа с документами</td><td>Возможности различаются между моделями и тарифами.</td></tr>
+</tbody>
+</table>
+<p style="margin-top:18px">Сравнение здесь носит учебный характер: модели быстро обновляются, поэтому конкретные функции нужно проверять по актуальной документации соответствующих разработчиков.</p>
+</div></section>
+
+<section id="education"><div class="container">
+<div class="section-head"><div class="number">08 / ОБРАЗОВАНИЕ</div><div><h3>ИИ в обучении</h3><p>Инструмент полезен тогда, когда усиливает понимание, а не просто заменяет самостоятельную работу.</p></div></div>
+<div class="grid two">
+<div class="card"><h4>Для ученика</h4><ul><li>объяснить непонятный термин;</li><li>разобрать тему по шагам;</li><li>получить пример;</li><li>создать вопросы для самопроверки;</li><li>сравнить разные объяснения.</li></ul></div>
+<div class="card"><h4>Для учителя</h4><ul><li>составить черновик урока;</li><li>придумать задания разного уровня;</li><li>подготовить структуру презентации;</li><li>адаптировать материал под возраст;</li><li>создать варианты формулировок.</li></ul></div>
+</div>
+<div class="quote" style="margin-top:25px">Главная ценность ИИ в образовании — не готовый ответ сам по себе, а возможность быстрее получить объяснение, пример или структуру, после чего человек самостоятельно проверяет и осмысливает материал.</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div class="number">09 / ПЛЮСЫ И ОГРАНИЧЕНИЯ</div><div><h3>Что важно учитывать?</h3><p>ИИ имеет сильные стороны, но не является безошибочным источником.</p></div></div>
+<div class="grid two">
+<div class="card"><h4>Преимущества</h4><ul><li>быстрое получение чернового результата;</li><li>адаптация объяснения под уровень пользователя;</li><li>структурирование большого объёма информации;</li><li>помощь в генерации идей;</li><li>поддержка при программировании.</li></ul></div>
+<div class="card"><h4>Ограничения</h4><ul><li>возможны фактические ошибки;</li><li>ответ может звучать убедительно, даже если он неверен;</li><li>модель может неправильно понять задачу;</li><li>актуальность информации зависит от системы и инструментов;</li><li>важные сведения нужно проверять по надёжным источникам.</li></ul></div>
+</div>
+</div></section>
+
+<section id="practice"><div class="container">
+<div class="section-head"><div class="number">10 / ПРАКТИКА</div><div><h3>Создание этого сайта</h3><p>Пример того, как ИИ и человек могут работать вместе.</p></div></div>
+<div class="grid">
+<div class="card"><h4>Шаг 1 — тема</h4><p>Выбрана тема Grok как современного инструмента искусственного интеллекта.</p></div>
+<div class="card"><h4>Шаг 2 — структура</h4><p>Материал разделён на логические блоки: основы, история, возможности, принцип работы, сравнение, образование и вывод.</p></div>
+<div class="card"><h4>Шаг 3 — HTML</h4><p>HTML отвечает за содержание и структуру страницы: заголовки, карточки, таблицы, списки и навигацию.</p></div>
+<div class="card"><h4>Шаг 4 — CSS</h4><p>CSS используется для оформления: тёмная тема, сетки, отступы, типографика, адаптивность и интерактивные состояния.</p></div>
+<div class="card"><h4>Шаг 5 — тестирование</h4><p>Готовая страница проверяется на компьютере и мобильном экране, а ссылки и элементы навигации должны вести к соответствующим разделам.</p></div>
+<div class="card"><h4>Шаг 6 — публикация</h4><p>Файл можно разместить в GitHub-репозитории и открыть через GitHub Pages.</p></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div class="number">11 / ПРОМПТЫ</div><div><h3>Как задавать хорошие запросы</h3><p>Чем яснее задача, тем легче получить полезный результат.</p></div></div>
+<div class="grid two">
+<div class="card"><h4>Слабый запрос</h4><p>«Расскажи про Grok»</p><p>Такой запрос слишком общий: непонятно, какой объём, стиль и цель нужны.</p></div>
+<div class="card"><h4>Более точный запрос</h4><p>«Составь учебный материал о Grok для студента 2 курса: дай определение, историю, возможности, принцип работы, преимущества и ограничения. Пиши простым академическим языком и выделяй ключевые понятия».</p></div>
+</div>
+<div style="margin-top:25px">
+<span class="badge">Контекст</span><span class="badge">Задача</span><span class="badge">Формат</span><span class="badge">Объём</span><span class="badge">Стиль</span><span class="badge">Ограничения</span>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div class="number">12 / ОТВЕТСТВЕННОСТЬ</div><div><h3>Человек остаётся главным</h3><p>ИИ помогает выполнять задачи, но ответственность за использование результата зависит от человека.</p></div></div>
+<div class="warning">
+<p><strong>Для учебной работы:</strong> не стоит без проверки переносить ответ ИИ в реферат, презентацию или исследование. Лучше использовать модель для объяснения и подготовки, а важные факты сверять с учебниками, научными публикациями, официальными сайтами и другими надёжными источниками.</p>
+</div>
+</div></section>
+
+<section id="faq"><div class="container">
+<div class="section-head"><div class="number">13 / FAQ</div><div><h3>Частые вопросы</h3><p>Короткие ответы для закрепления темы.</p></div></div>
+<div class="faq">
+<article><h4>Grok — это поисковик?</h4><p>Нет. ИИ-система и поисковая система — разные понятия. Однако конкретное приложение может иметь доступ к дополнительным источникам или инструментам поиска.</p></article>
+<article><h4>Может ли Grok ошибаться?</h4><p>Да. Как и другие генеративные модели, он может выдавать фактически неверную информацию. Важные данные следует проверять.</p></article>
+<article><h4>Может ли ИИ заменить учителя?</h4><p>ИИ может автоматизировать отдельные задачи и помогать с подготовкой материалов, но обучение включает педагогическое взаимодействие, оценивание, мотивацию и ответственность человека.</p></article>
+<article><h4>Почему два запроса могут дать разные ответы?</h4><p>На результат влияют формулировка запроса, контекст, модель, настройки и доступные инструменты.</p></article>
+<article><h4>Что такое промпт?</h4><p>Это инструкция или запрос пользователя к модели.</p></article>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div class="number">14 / ИТОГ</div><div><h3>Главная мысль</h3><p>Grok — пример того, как современные технологии искусственного интеллекта превращаются в универсальные цифровые инструменты.</p></div></div>
+<p class="lead">Изучение ИИ важно не только для понимания конкретного сервиса. Оно помогает разобраться в новом типе цифровых технологий, научиться правильно формулировать задачи, критически оценивать полученную информацию и использовать автоматизацию осознанно. Поэтому грамотная работа с ИИ состоит из трёх частей: хороший запрос, анализ результата и проверка важных сведений.</p>
+</div></section>
+
+<footer><div class="container">
+<div style="font-size:30px;font-weight:900;letter-spacing:5px">GROK</div>
+<p>Большой учебный информационный проект • 2026</p>
+<p>HTML + CSS • Адаптивный дизайн • GitHub Pages</p>
+</div></footer>
+<a class="top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>
